@@ -5,7 +5,7 @@ form.onsubmit = (e)=>{
   e.preventDefault();
   statusTxt.style.color = "#0D6EFD";
   statusTxt.style.display = "block";
-  statusTxt.innerText = "Sending your message...";
+  statusTxt.innerText = "Enviando su Mensaje...";
   form.classList.add("disabled");
 
   let xhr = new XMLHttpRequest();
@@ -19,7 +19,7 @@ form.onsubmit = (e)=>{
         form.reset();
         setTimeout(()=>{
           statusTxt.style.display = "none";
-        }, 3000);
+        }, 1000);
       }
       statusTxt.innerText = response;
       form.classList.remove("disabled");
